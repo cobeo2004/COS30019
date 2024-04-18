@@ -1,0 +1,74 @@
+<mxfile host="Electron" modified="2024-04-18T04:27:20.175Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.2.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="o6Bd-xRji8aecXV1EcNk" version="24.2.5" type="device">
+  <diagram name="Trang-1" id="y-S9JWHdQoY54VqflCBQ">
+    <mxGraphModel dx="398" dy="1486" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="8S4YnrcsyFdZOyX_xLiz-1" value="&amp;lt;&amp;lt;abstract&amp;gt;&amp;gt;&lt;div&gt;IGrid&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1800" y="485" width="330" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="8S4YnrcsyFdZOyX_xLiz-2" value="- rows: int&lt;div&gt;- cols: int&amp;nbsp;&lt;/div&gt;&lt;div&gt;- grid: list[list[int]]&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="8S4YnrcsyFdZOyX_xLiz-1">
+          <mxGeometry y="40" width="330" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="8S4YnrcsyFdZOyX_xLiz-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="8S4YnrcsyFdZOyX_xLiz-1">
+          <mxGeometry y="90" width="330" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="8S4YnrcsyFdZOyX_xLiz-4" value="&lt;div&gt;+ IGrid(int rows, int cols)&lt;/div&gt;+ appendWall(int x, int y, int width, int height): &amp;lt;&amp;lt;abstract&amp;gt;&amp;gt;&lt;div&gt;+ isMovable(int x, int y): bool &amp;lt;&amp;lt;abstract&amp;gt;&amp;gt;&lt;/div&gt;&lt;div&gt;+ toArray(): str &amp;lt;&amp;lt;abstract&amp;gt;&amp;gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="8S4YnrcsyFdZOyX_xLiz-1">
+          <mxGeometry y="98" width="330" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="8S4YnrcsyFdZOyX_xLiz-5" value="&amp;lt;&amp;lt;abstract&amp;gt;&amp;gt;&lt;div&gt;INode&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2200" y="460" width="320" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="8S4YnrcsyFdZOyX_xLiz-6" value="- x: int&lt;div&gt;- y: int&lt;/div&gt;&lt;div&gt;- parent: INode&lt;/div&gt;&lt;div&gt;- pathCost: int = 0&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="8S4YnrcsyFdZOyX_xLiz-5">
+          <mxGeometry y="40" width="320" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="8S4YnrcsyFdZOyX_xLiz-7" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="8S4YnrcsyFdZOyX_xLiz-5">
+          <mxGeometry y="110" width="320" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="8S4YnrcsyFdZOyX_xLiz-8" value="+ INode(int sX, int sY, INode parent, int pathCost)&lt;div&gt;+ __repr__(): str &amp;lt;&amp;lt;override&amp;gt;&amp;gt;&lt;/div&gt;&lt;div&gt;+ __lt__(node: INode): bool &amp;lt;&amp;lt;override&amp;gt;&amp;gt;&lt;/div&gt;&lt;div&gt;+ __eq__(node: INode): bool &amp;lt;&amp;lt;override&amp;gt;&amp;gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="8S4YnrcsyFdZOyX_xLiz-5">
+          <mxGeometry y="118" width="320" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="8S4YnrcsyFdZOyX_xLiz-9" value="&amp;lt;&amp;lt;abstract&amp;gt;&amp;gt;&lt;div&gt;IPath&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2620" y="485" width="300" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="8S4YnrcsyFdZOyX_xLiz-10" value="+ getFullPathFromNode(INode node): list &amp;lt;&amp;lt;abstract&amp;gt;&amp;gt;&lt;div&gt;+ reinterpretPath(INode node): str &amp;lt;&amp;lt;abstract&amp;gt;&amp;gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="8S4YnrcsyFdZOyX_xLiz-9">
+          <mxGeometry y="40" width="300" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="8S4YnrcsyFdZOyX_xLiz-11" value="Grid" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1800" y="760" width="330" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="8S4YnrcsyFdZOyX_xLiz-12" value="&lt;div&gt;+ Grid(int rows, int cols)&lt;/div&gt;+ appendWall(int x, int y, int width, int height): &amp;lt;&amp;lt;override&amp;gt;&amp;gt;&lt;div&gt;+ isMovable(int x, int y): bool &amp;lt;&amp;lt;override&amp;gt;&amp;gt;&lt;/div&gt;&lt;div&gt;+ toArray(): str &amp;lt;&amp;lt;override&amp;gt;&amp;gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="8S4YnrcsyFdZOyX_xLiz-11">
+          <mxGeometry y="30" width="330" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="8S4YnrcsyFdZOyX_xLiz-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.497;entryY=1.008;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=block;endFill=0;" edge="1" parent="1" source="8S4YnrcsyFdZOyX_xLiz-11" target="8S4YnrcsyFdZOyX_xLiz-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8S4YnrcsyFdZOyX_xLiz-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.515;entryY=0.999;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=block;endFill=0;" edge="1" parent="1" source="8S4YnrcsyFdZOyX_xLiz-15" target="8S4YnrcsyFdZOyX_xLiz-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2365" y="660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8S4YnrcsyFdZOyX_xLiz-15" value="Node" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2200" y="760" width="330" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8S4YnrcsyFdZOyX_xLiz-16" value="+ Node(int sX, int sY, INode parent, int pathCost)&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="8S4YnrcsyFdZOyX_xLiz-15">
+          <mxGeometry y="30" width="330" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8S4YnrcsyFdZOyX_xLiz-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=0;" edge="1" parent="1" source="8S4YnrcsyFdZOyX_xLiz-18" target="8S4YnrcsyFdZOyX_xLiz-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2770.101449275362" y="620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8S4YnrcsyFdZOyX_xLiz-18" value="Path" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2605" y="760" width="330" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="8S4YnrcsyFdZOyX_xLiz-19" value="+ getFullPathFromNode(INode node): list &amp;lt;&amp;lt;override&amp;gt;&amp;gt;&lt;div&gt;+ reinterpretPath(INode node): str &amp;lt;&amp;lt;override&amp;gt;&amp;gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="8S4YnrcsyFdZOyX_xLiz-18">
+          <mxGeometry y="30" width="330" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="8S4YnrcsyFdZOyX_xLiz-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.005;entryY=0.854;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=diamondThin;endFill=1;" edge="1" parent="1" source="8S4YnrcsyFdZOyX_xLiz-10" target="8S4YnrcsyFdZOyX_xLiz-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
